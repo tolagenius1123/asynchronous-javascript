@@ -1,0 +1,105 @@
+Topic: Asynchronous Programming in JavaScript
+
+Before we dive into what asynchronous JavaScript is, let us
+find out what asynchronous programming is and how it differs from
+synchronous programming
+
+*Synchronous Programming
+Synchronous programming is a way for computers to do things one
+step at a time, in the order they are given the instructions.
+
+Synchronous means that code is executed sequentially from top
+to bottom. Each statement is completed before the next one begins
+
+Synchronous can be inefficient in cases where statements rely on 
+Input and Output or network operations that may experience latency.
+
+However, synchronous programming can be inefficient when dealing 
+with tasks that take significant amount of time to complete.
+
+For example, let's say that a synchronous program performs a task 
+that requires waiting for a response from a remote server. 
+
+The program will be stuck waiting for the response and cannot do 
+anything else until the response is returned. 
+
+This is known as blocking and it can lead to an application 
+appearing unresponsive or frozen to the user.
+
+* Asynchronous programming is a process by which a computer handles
+multiple tasks simultaneously rather than executing them one after
+the other. 
+
+Asynchronous programming allows a program to continue working on other 
+tasks while waiting for external events, such as network requests, to occur. 
+This approach can greatly improve the performance and responsiveness of a program.
+
+In asynchronous code, statements do not have to wait for other processes to
+finish before they can run. It allows multiple processes to run independently 
+without blocking each other.
+
+Asynchronous programming is
+1. Non-blocking - statements don't block each other from executing
+2. Concurrent - multiple processes can be executed simultaneously
+3. Event-driven - relies on event handlers/callbacks rather than sequential
+code
+4. Parallelism - enables parallel execution on multi-core systems
+
+Asynchronous programs can process multiple things simultaneously by 
+leveraging concurrency.
+
+A callback function is a function passed into another function as an
+argument, which is then invoked inside the outer function to complete 
+some kind of routine or action.
+
+At its most fundamental level, asynchronous programming in JavaScript 
+is done with callbacks.
+
+*Promises
+A promise is an object that represents the result of an asynchronous operation. 
+A promise is a good way to handle asynchronous operations. 
+It is used to find out if the asynchronous operation is successfully 
+completed or not.
+
+A promise may have one of three states
+1. Pending
+2. Fulfilled
+3. Rejected
+
+When you request data from the server by using a promise, it will be
+in a pending state. When the data arrives successfully, it will be
+in a fulfilled state. If an error occurs, then it will be in a rejected state.
+
+*Create a Promise
+To create a promise object, we use the Promise() constructor.
+
+The Promise() constructor takes a function as an argument. 
+The function also accepts two functions resolve() and reject().
+
+If the promise returns successfully, the resolve() function is called. 
+And, if an error occurs, the reject() function is called.
+
+Promises are useful when you have to handle more than one asynchronous task, 
+one after another. For that, we use promise chaining.
+
+You can perform an operation after a promise is resolved using methods 
+then(), catch() and finally().
+
+Chaining the promise with then()
+the then() method is used with the callback when the promise is successfully 
+fulfilled or resolved.
+
+The catch() method is used with the callback when the promise is rejected or 
+if an error occurs.
+
+The finally() method gets executed when the promise is either resolved 
+successfully or rejected.
+
+Async and Await
+We use the async keyword with a function to represent that the
+function is an asynchronous function. The async function returns a promise.
+
+The await keyword is used inside the async function to wait for the asynchronous
+operation.
+
+
