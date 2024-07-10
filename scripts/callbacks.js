@@ -19,3 +19,8 @@
 // console.log("This is the third step");
 
 // What are the disadvantages of using callbacks to handle asynchronous operations in JavaScript
+  //Error handling in callback-based code can become cumbersome.
+  //Testing asynchronous code involving callbacks can be more challenging.
+  //When dealing with multiple asynchronous operations nested within each other (e.g., fetching data A, then using data A to fetch data B, and so on), 
+  //   callbacks can lead to deeply nested code structures.
+  //Composing asynchronous operations, meaning combining them into reusable functions or patterns, can be trickier with callbacks.
